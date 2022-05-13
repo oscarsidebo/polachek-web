@@ -14,6 +14,20 @@ export default function Home() {
       {/* Top */}
       <Image src="/images/logo.png" alt="logo" width="100" height="44" layout="responsive" />
 
+      <div className="mb-40"></div>
+
+      {/* Links */}
+      <div className="relative flex justify-center items-center  md:py-80 w-screen" >
+        {links.map(({ href, label }, i) => (
+          <a key={i} href={href} className="text-3xl md:text-6xl  font-serif uppercase mx-16 md:mx-16 lg:mx-40 hover:underline" target="_blank" rel="noreferrer" style={{
+            mixBlendMode: 'exclusion'
+          }}>
+            <h2>
+              {label}
+            </h2>
+          </a>
+        ))}
+      </div>
       {/* Tour Dates */}
       <div className="mt-80 container mx-auto px-40">
         {/* 
@@ -30,23 +44,6 @@ export default function Home() {
         <Image src="/images/caroline.png" alt="hero shot" width="100" height="82" layout="responsive" />
       </div>
 
-
-
-      {/* Bottom */}
-      <div className="absolute flex justify-center items-center py-80 w-screen" style={{
-        bottom: 0,
-        left: 0
-      }}>
-        {links.map(({ href, label }, i) => (
-          <a key={i} href={href} className="text-3xl md:text-6xl  font-serif uppercase mx-16 md:mx-16 lg:mx-40 hover:underline" target="_blank" rel="noreferrer" style={{
-            mixBlendMode: 'exclusion'
-          }}>
-            <h2>
-              {label}
-            </h2>
-          </a>
-        ))}
-      </div>
     </div>
   )
 }
