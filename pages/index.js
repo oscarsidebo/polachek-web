@@ -1,5 +1,6 @@
 import Script from 'next/script';
 import Image from 'next/image';
+import Head from 'next/head';
 
 export default function Home() {
 
@@ -10,7 +11,20 @@ export default function Home() {
   ]
 
   return (
+
     <div className="relative">
+
+      <Head>
+        <meta charset="utf-8"></meta>
+        <title>Caroline Polachek Tour</title>
+        <meta content="Caroline Polachek Tour" property="og:title"></meta>
+        <meta content="Caroline Polachek Tour" property="twitter:title"></meta>
+        <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+        <link href="images/favicon.jpg" rel="shortcut icon" type="image/x-icon"></link>
+        <link href="images/webclip.jpg" rel="apple-touch-icon"></link>
+      </Head>
+
+
       {/* Top */}
       <Image src="/images/logo.png" alt="logo" width="100" height="44" layout="responsive" />
 
