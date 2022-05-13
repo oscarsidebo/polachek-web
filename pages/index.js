@@ -38,7 +38,7 @@ export default function Home() {
         left: 0
       }}>
         {links.map(({ href, label }, i) => (
-          <a key={i} href={href} className="text-6xl font-serif uppercase mx-40 hover:underline" target="_blank">
+          <a key={i} href={href} className="text-6xl font-serif uppercase mx-40 hover:underline" target="_blank" rel="noreferrer">
             <h2>
               {label}
             </h2>
