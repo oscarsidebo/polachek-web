@@ -1,16 +1,47 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'Innocence Latterve 2';
+  font-style: normal; 
+  font-weight: 400;
+  src: url('/fonts/InnocenceLatterve2-Regular.ttf') format('truetype'); 
+  font-display: swap;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+
+@layer base {
+  body {
+    @apply bg-black; 
+    @apply text-secondary;
+    @apply antialiased;
+  }
 }
 
-* {
-  box-sizing: border-box;
+
+/* seated widget overrides */
+.seated-follow-box {
+  display: none;
+}
+
+.seated-event-date-cell {
+}
+
+.seated-event-venue-name {
+  font-size: 20px;
+}
+
+
+.seated-event-venue-location {
+  font-size: 20px;
+}
+
+.seated-event-link1 {
+  background: #FEE9DC !important;
+}
+
+.seated-event-link1:hover {
+  background: transparent !important;
 }
