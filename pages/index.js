@@ -1,14 +1,34 @@
+import { useState, useEffect } from 'react';
 import Script from 'next/script';
 import Image from 'next/image';
 import Head from 'next/head';
 
 export default function Home() {
+  const [location, setLocation] = useState('US');
+
+  async function getCountry() {
+    const response = await fetch('https://ipapi.co/json/').then(res => res.json()).catch(err => console.log(err));
+
+    if (response && response.continent_code) {
+      return response.continent_code === ('NA' || 'SA') ? 'US' : 'ROW';
+    }
+
+    return 'US';
+
+  }
 
   const links = [
-    { href: 'http://shop.carolinepolachek.com/', label: 'Merch' },
+    { href: location === 'US' ? 'http://shop.carolinepolachek.com/' : 'https://shop-uk.carolinepolachek.com/', label: 'Merch' },
     { href: 'https://www.youtube.com/channel/UC_YiGpMGuBb1PbjqPQMf9MQ', label: 'Video' },
     { href: 'https://orcd.co/PANG', label: 'Music' },
   ]
+
+  useEffect(() => {
+    // make sure it's client side and only run once
+    if (window !== undefined) {
+      getCountry().then(res => setLocation(res));
+    }
+  }, []);
 
   return (
 
@@ -41,11 +61,9 @@ export default function Home() {
           </a>
         ))}
       </div>
+
       {/* Tour Dates */}
       <div className="mt-80 container mx-auto px-40">
-        {/* 
-        <style>.seated-follow-box{display:none}</style>
-              */}
         <div className="font-serif text-secondary" id="seated-55fdf2c0" data-artist-id="bbf67218-01fc-48bb-8aa5-ab9098585c6b" data-css-version="2"></div>
         <Script
           src="https://widget.seated.com/app.js"
