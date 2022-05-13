@@ -15,7 +15,7 @@ export default function Home() {
       <Image src="/images/logo.png" alt="logo" width="100" height="44" layout="responsive" />
 
       {/* Tour Dates */}
-      <div className="my-80 container mx-auto px-40">
+      <div className="mt-80 container mx-auto px-40">
         {/* 
         <style>.seated-follow-box{display:none}</style>
               */}
@@ -27,7 +27,7 @@ export default function Home() {
 
       {/* Background Image */}
       <div className="w-screen">
-        <Image src="/images/caroline.png" alt="hero shot" width="100" height="59" layout="responsive" />
+        <Image src="/images/caroline.png" alt="hero shot" width="100" height="82" layout="responsive" />
       </div>
 
 
