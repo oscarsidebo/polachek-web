@@ -20,8 +20,7 @@ export default function Home() {
         <meta content="Caroline Polachek Tour" property="og:title"></meta>
         <meta content="Caroline Polachek Tour" property="twitter:title"></meta>
         <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
-        <link href="images/favicon.jpg" rel="shortcut icon" type="image/x-icon"></link>
-        <link href="images/webclip.jpg" rel="apple-touch-icon"></link>
+        <link href="/favicon.jpeg" rel="shortcut icon" type="image/x-icon"></link>
       </Head>
 
 
