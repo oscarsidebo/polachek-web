@@ -38,7 +38,9 @@ export default function Home() {
         left: 0
       }}>
         {links.map(({ href, label }, i) => (
-          <a key={i} href={href} className="text-6xl font-serif uppercase mx-40 hover:underline" target="_blank" rel="noreferrer">
+          <a key={i} href={href} className="text-3xl md:text-6xl  font-serif uppercase mx-16 md:mx-16 lg:mx-40 hover:underline" target="_blank" rel="noreferrer" style={{
+            mixBlendMode: 'exclusion'
+          }}>
             <h2>
               {label}
             </h2>
