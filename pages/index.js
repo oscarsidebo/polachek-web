@@ -10,7 +10,11 @@ export default function Home() {
     const response = await fetch('https://ipapi.co/json/').then(res => res.json()).catch(err => console.log(err));
 
     if (response && response.continent_code) {
-      return response.continent_code === ('NA' || 'SA') ? 'US' : 'ROW';
+      if (response.continent_code === 'NA' || response.continent_code === 'SA') {
+        return 'US'
+      } else {
+        return 'ROW'
+      }
     }
 
     return 'US';
